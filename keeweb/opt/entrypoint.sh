@@ -42,6 +42,10 @@ then
   echo ">> generating webdav auth file"
   echo -n ${WEBDAV_USERNAME}: > ${WEBDAV_AUTH}
   openssl passwd -6 ${WEBDAV_PASSWORD} >> ${WEBDAV_AUTH}
+
+  # clean username and password
+  WEBDAV_USERNAME=""
+  WEBDAV_PASSWORD=""
 fi
 
 if [ "${KEEWEB_CONFIG_URL}" ]
