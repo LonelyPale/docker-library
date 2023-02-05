@@ -1,4 +1,4 @@
 FROM antelle/keeweb:1.18.7
 
-COPY nginx/conf.d/keeweb.conf /etc/nginx/conf.d
-COPY ssl /etc/nginx/external
+COPY opt/entrypoint.sh /opt/
+COPY nginx/conf.d/keeweb.conf /etc/nginx/conf.d/
