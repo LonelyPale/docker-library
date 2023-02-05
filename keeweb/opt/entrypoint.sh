@@ -42,16 +42,16 @@ then
   echo ">> generating webdav auth file"
   echo -n ${WEBDAV_USERNAME}: > ${WEBDAV_AUTH}
   openssl passwd -6 ${WEBDAV_PASSWORD} >> ${WEBDAV_AUTH}
-
-  # clean username and password
-  WEBDAV_USERNAME=""
-  WEBDAV_PASSWORD=""
 fi
 
 if [ "${KEEWEB_CONFIG_URL}" ]
 then
   sed -i "s,(no-config),${KEEWEB_CONFIG_URL}," /keeweb/index.html
 fi
+
+# clean username and password
+unset WEBDAV_USERNAME
+unset WEBDAV_PASSWORD
 
 # exec CMD
 echo ">> exec docker CMD"

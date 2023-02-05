@@ -12,6 +12,7 @@ docker run --rm -it keeweb bash
 docker run --rm -it -p 18443:443 keeweb
 
 # run
+docker restart keeweb
 docker run --name keeweb -d -p 18443:443 keeweb
 docker run --name keeweb -d -p 18443:443 \
 -e WEBDAV_USERNAME=webdav \
