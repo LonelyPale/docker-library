@@ -49,7 +49,9 @@ then
   sed -i "s,(no-config),${KEEWEB_CONFIG_URL}," /keeweb/index.html
 fi
 
-# clean username and password
+# Clean username and password,
+# Only variables in the shell can be cleared,
+# Cannot clear variables in docker metadata.
 unset WEBDAV_USERNAME
 unset WEBDAV_PASSWORD
 
