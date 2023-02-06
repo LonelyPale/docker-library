@@ -17,6 +17,7 @@ docker run --name keeweb -d -p 18443:443 \
     keeweb
 docker run --name keeweb -d -p 18443:443 \
     -v /data/keeweb/ssl/:/etc/nginx/external/ssl/ \
+    -v /data/keeweb/webdav/:/webdav/ \
     -v /data/keeweb/webdav_auth:/etc/nginx/external/webdav_auth \
     keeweb
 

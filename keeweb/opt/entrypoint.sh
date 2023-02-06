@@ -33,7 +33,7 @@ if [ -z "${WEBDAV_USERNAME}" ] || [ -z "${WEBDAV_PASSWORD}" ]
 then
   >&2 echo ">> no \$WEBDAV_USERNAME or \$WEBDAV_PASSWORD specified using default"
   WEBDAV_USERNAME="webdav-user"
-  WEBDAV_PASSWORD="my-dav_keeweb-888"
+  WEBDAV_PASSWORD="keeweb-pass"
 fi
 
 WEBDAV_AUTH="/etc/nginx/external/webdav_auth"
